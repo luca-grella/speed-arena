@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed | Natura vs Macchina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        .apple-text-gradient {
+            background: linear-gradient(180deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-full {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .race-arena {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.03);
+            border-radius: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+
+        .competitor {
+            position: absolute;
+            left: -150px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.1s linear;
+        }
+
+        .cheetah-row { top: 25%; }
+        .bugatti-row { top: 65%; }
+
+        .btn-apple {
+            background: #fff;
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-apple:hover {
+            background: #e5e5e5;
+            transform: scale(1.05);
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .stat-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+
+        .stat-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            object-fit: cover;
+            filter: grayscale(30%);
+            transition: filter 0.3s ease;
+        }
+
+        .stat-card:hover .stat-img {
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="section-full">
+        <h1 class="text-6xl md:text-9xl font-extrabold tracking-tighter apple-text-gradient mb-6" data-aos="fade-up">
+            Speed.
+        </h1>
+        <p class="text-xl md:text-3xl text-gray-400 font-light mb-12 max-w-3xl" data-aos="fade-up" data-aos-delay="200">
+            L'estetica della velocità. Un viaggio tra l'istinto primordiale e la precisione ingegneristica.
+        </p>
+        <a href="#explore" class="btn-apple text-lg" data-aos="fade-up" data-aos-delay="400">Esplora l'estasi</a>
+    </section>
+
+    <!-- SEZIONE NATURA (Espansa) -->
+    <section id="explore" class="section-full bg-[#050505]">
+        <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="text-left" data-aos="fade-right">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6">Natura <br><span class="text-gray-500">Senza Limiti.</span></h2>
+                <p class="text-gray-400 text-lg mb-12 font-light">L'evoluzione ha perfezionato ogni muscolo e piuma per un unico scopo: la sopravvivenza attraverso la rapidità.</p>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1611643475242-6d1017784384?auto=format&fit=crop&w=150&q=80" class="stat-img" alt="Falcone">
+                        <div class="flex-1 flex justify-between items-center">
+                            <span class="text-xl font-semibold">Falcone Pellegrino</span>
+                            <span class="text-2xl font-bold text-blue-400">389 <small class="text-sm">km/h</small></span>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1534188077725-3770f8890870?auto=format&fit=crop&w=150&q=80" class="stat-img" alt="Ghepardo">
+                        <div class="flex-1 flex justify-between items-center">
+                            <span class="text-xl font-semibold">Ghepardo</span>
+                            <span class="text-2xl font-bold text-blue-400">120 <small class="text-sm">km/h</small></span>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1599413426648-75279966065e?auto=format&fit=crop&w=150&q=80" class="stat-img" alt="Pesce Vela">
+                        <div class="flex-1 flex justify-between items-center">
+                            <span class="text-xl font-semibold">Pesce Vela</span>
+                            <span class="text-2xl font-bold text-blue-400">110 <small class="text-sm">km/h</small></span>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://images.unsplash.com/photo-1546182990-d67967769972?auto=format&fit=crop&w=150&q=80" class="stat-img" alt="Leone">
+                        <div class="flex-1 flex justify-between items-center">
+                            <span class="text-xl font-semibold">Leone</span>
+                            <span class="text-2xl font-bold text-blue-400">80 <small class="text-sm">km/h</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:block" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1534188077725-3770f8890870?auto=format&fit=crop&w=800&q=80" class="rounded-[40px] shadow-2xl opacity-80 hover:opacity-100 transition-opacity duration-700" alt="Hero Nature">
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE MACCHINE (Espansa) -->
+    <section class="section-full bg-black">
+        <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="grid grid-cols-1 gap-4 order-2 lg:order-1" data-aos="fade-right">
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1547448778-f97969875a9d?auto=format&fit=crop&w=150&q=80" class="stat-img" alt="Thrust">
+                    <div class="flex-1 flex justify-between items-center">
+                        <span class="text-xl font-semibold">Thrust SSC</span>
+                        <span class="text-2xl font-bold text-red-500">1228 <small class="text-sm">km/h</small></span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f17?auto=format&fit=crop&w=150&q=80" class="stat-img" alt="Bugatti">
+                    <div class="flex-1 flex justify-between items-center">
+                        <span class="text-xl font-semibold">Bugatti Chiron</span>
+                        <span class="text-2xl font-bold text-red-500">490 <small class="text-sm">km/h</small></span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1532105956626-95670f19975a?auto=format&fit=crop&w=150&q=80" class="stat-img" alt="Maglev">
+                    <div class="flex-1 flex justify-between items-center">
+                        <span class="text-xl font-semibold">SCMaglev</span>
+                        <span class="text-2xl font-bold text-red-500">603 <small class="text-sm">km/h</small></span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=150&q=80" class="stat-img" alt="Porsche">
+                    <div class="flex-1 flex justify-between items-center">
+                        <span class="text-xl font-semibold">Porsche 911 GT3</span>
+                        <span class="text-2xl font-bold text-red-500">320 <small class="text-sm">km/h</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-left order-1 lg:order-2" data-aos="fade-left">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6">Ingegneria <br><span class="text-gray-500">Estrema.</span></h2>
+                <p class="text-gray-400 text-lg mb-12 font-light">Il metallo sfida le leggi della fisica, superando ogni limite biologico attraverso la potenza bruta e l'aerodinamica.</p>
+                <div class="p-8 border-l-2 border-red-500 bg-red-500/5 italic text-gray-300">
+                    "Il limite non esiste, esiste solo la resistenza dell'aria."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE GARA: THE SHOWDOWN -->
+    <section class="section-full bg-[#0a0a0a]">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-5xl md:text-7xl font-bold mb-4">La Sfida.</h2>
+            <p class="text-gray-500 text-xl">L'istinto contro il motore.</p>
+        </div>
+
+        <div class="race-arena" data-aos="zoom-in">
+            <div id="countdown" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl font-black hidden z-20">3</div>
+
+            <div id="cheetah" class="competitor cheetah-row">
+                <span class="text-4xl">🐆</span>
+                <span class="text-sm font-medium tracking-widest uppercase opacity-60">Ghepardo</span>
+            </div>
+
+            <div id="bugatti" class="competitor bugatti-row">
+                <span class="text-4xl">🏎️</span>
+                <span class="text-sm font-medium tracking-widest uppercase opacity-60">Bugatti</span>
+            </div>
+        </div>
+
+        <button onclick="startRace()" class="btn-apple mt-16 text-xl px-12 py-4" data-aos="fade-up">
+            Avvia Simulazione
+        </button>
+    </section>
+
+    <footer class="py-20 text-center text-gray-600 text-sm font-light">
+        <p>&copy; 2026 Speed Experience. Design ispirato al minimalismo Apple.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 1200, once: false });
+
+        let cheetahPos = -150;
+        let bugattiPos = -150;
+        let cheetahVel = 0;
+        let bugattiVel = 0;
+        let animationFrame;
+        let isRacing = false;
+
+        function startRace() {
+            if(isRacing) return;
+
+            const countdownEl = document.getElementById('countdown');
+            countdownEl.style.display = 'block';
+
+            let count = 3;
+            countdownEl.innerText = count;
+
+            const timer = setInterval(() => {
+                count--;
+                if (count > 0) {
+                    countdownEl.innerText = count;
+                } else {
+                    clearInterval(timer);
+                    countdownEl.style.display = 'none';
+                    beginMovement();
+                }
+            }, 1000);
+        }
+
+        function beginMovement() {
+            isRacing = true;
+            cheetahPos = -150;
+            bugattiPos = -150;
+            cheetahVel = 0;
+            bugattiVel = 0;
+
+            function update() {
+                if (cheetahVel < 15) cheetahVel += 0.6;
+                if (bugattiVel < 35) bugattiVel += 0.2;
+
+                cheetahPos += cheetahVel;
+                bugattiPos += bugattiVel;
+
+                document.getElementById('cheetah').style.transform = `translateX(${cheetahPos}px)`;
+                document.getElementById('bugatti').style.transform = `translateX(${bugattiPos}px)`;
+
+                if (cheetahPos > window.innerWidth || bugattiPos > window.innerWidth) {
+                    isRacing = false;
+                    cancelAnimationFrame(animationFrame);
+                    return;
+                }
+                animationFrame = requestAnimationFrame(update);
+            }
+            animationFrame = requestAnimationFrame(update);
+        }
+    </script>
+</body>
+</html>
