@@ -101,6 +101,20 @@
         .stat-card:hover .stat-img {
             filter: grayscale(0%);
         }
+
+        .stat-emoji {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            background: rgba(255,255,255,0.06);
+            flex-shrink: 0;
+        }
+        .stat-card:hover .stat-emoji {
+            background: rgba(255,255,255,0.12);
+            transform: scale(1.08);
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -125,28 +139,28 @@
 
                 <div class="grid grid-cols-1 gap-4">
                     <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://picsum.photos/seed/peregrine/320/240" class="stat-img" alt="Falcone">
+                        <div class="stat-img stat-emoji" title="Falcone Pellegrino">🦅</div>
                         <div class="flex-1 flex justify-between items-center">
                             <span class="text-xl font-semibold">Falcone Pellegrino</span>
                             <span class="text-2xl font-bold text-blue-400">389 <small class="text-sm">km/h</small></span>
                         </div>
                     </div>
                     <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://picsum.photos/seed/cheetah94/320/240" class="stat-img" alt="Ghepardo">
+                        <div class="stat-img stat-emoji" title="Ghepardo">🐆</div>
                         <div class="flex-1 flex justify-between items-center">
                             <span class="text-xl font-semibold">Ghepardo</span>
                             <span class="text-2xl font-bold text-blue-400">120 <small class="text-sm">km/h</small></span>
                         </div>
                     </div>
                     <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="https://picsum.photos/seed/sailfish/320/240" class="stat-img" alt="Pesce Vela">
+                        <div class="stat-img stat-emoji" title="Pesce Vela">🐟</div>
                         <div class="flex-1 flex justify-between items-center">
                             <span class="text-xl font-semibold">Pesce Vela</span>
                             <span class="text-2xl font-bold text-blue-400">110 <small class="text-sm">km/h</small></span>
                         </div>
                     </div>
                     <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="https://picsum.photos/seed/lion94/320/240" class="stat-img" alt="Leone">
+                        <div class="stat-img stat-emoji" title="Leone">🦁</div>
                         <div class="flex-1 flex justify-between items-center">
                             <span class="text-xl font-semibold">Leone</span>
                             <span class="text-2xl font-bold text-blue-400">80 <small class="text-sm">km/h</small></span>
@@ -155,7 +169,7 @@
                 </div>
             </div>
             <div class="hidden lg:block" data-aos="fade-left">
-                <img src="https://picsum.photos/seed/wildlife94/900/500" class="rounded-[40px] shadow-2xl opacity-80 hover:opacity-100 transition-opacity duration-700" alt="Hero Nature">
+                <div style="width:100%;height:420px;border-radius:40px;background:linear-gradient(135deg,#0d2b1a 0%,#1a4a2e 40%,#0a3d20 70%,#071a0f 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 32px 80px rgba(0,0,0,.7);font-size:7rem;filter:drop-shadow(0 8px 32px rgba(0,0,0,.5))" class="opacity-80 hover:opacity-100 transition-opacity duration-700">🐆</div>
             </div>
         </div>
     </section>
@@ -165,21 +179,21 @@
         <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="grid grid-cols-1 gap-4 order-2 lg:order-1" data-aos="fade-right">
                 <div class="stat-card">
-                    <img src="https://picsum.photos/seed/thrust94/320/240" class="stat-img" alt="Thrust">
+                    <div class="stat-img stat-emoji" title="Thrust SSC">🚀</div>
                     <div class="flex-1 flex justify-between items-center">
                         <span class="text-xl font-semibold">Thrust SSC</span>
                         <span class="text-2xl font-bold text-red-500">1228 <small class="text-sm">km/h</small></span>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <img src="https://picsum.photos/seed/bugatti94/320/240" class="stat-img" alt="Bugatti">
+                    <div class="stat-img stat-emoji" title="Bugatti Chiron">🏎️</div>
                     <div class="flex-1 flex justify-between items-center">
                         <span class="text-xl font-semibold">Bugatti Chiron</span>
                         <span class="text-2xl font-bold text-red-500">490 <small class="text-sm">km/h</small></span>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <img src="https://picsum.photos/seed/maglev94/320/240" class="stat-img" alt="Maglev">
+                    <div class="stat-img stat-emoji" title="Maglev SCMaglev">🚄</div>
                     <div class="flex-1 flex justify-between items-center">
                         <span class="text-xl font-semibold">SCMaglev</span>
                         <span class="text-2xl font-bold text-red-500">603 <small class="text-sm">km/h</small></span>
